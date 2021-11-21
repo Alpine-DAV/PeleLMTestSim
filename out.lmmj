@@ -1,0 +1,5628 @@
+Initializing CUDA...
+CUDA initialized with 1 GPU per MPI rank; 60 GPU(s) used in total
+MPI initialized with 60 MPI processes
+MPI initialized with thread support level 0
+AMReX (21.11-5-g2ec7459dd689-dirty) initialized
+Creating ReactorBase instance: ReactorCvode
+Spray fuel species NC12H26
+Number of particles per parcel 5
+
+Dumping ParmParse table:
+ 
+geometry.is_periodic(nvals = 3)  :: [0, 0, 0]
+geometry.coord_sys(nvals = 1)  :: [0]
+geometry.prob_lo(nvals = 3)  :: [-0.00128, -0.00128, 0.]
+geometry.prob_hi(nvals = 3)  :: [.00128, 0.00128, 0.01024]
+peleLM.lo_bc(nvals = 3)  :: [SlipWallAdiab, SlipWallAdiab, Inflow]
+peleLM.hi_bc(nvals = 3)  :: [SlipWallAdiab, SlipWallAdiab, Outflow]
+amr.n_cell(nvals = 3)  :: [64, 64, 256]
+amr.v(nvals = 1)  :: [0]
+amr.max_level(nvals = 1)  :: [2]
+amr.ref_ratio(nvals = 4)  :: [2, 2, 2, 2]
+amr.regrid_int(nvals = 1)  :: [8]
+amr.n_error_buf(nvals = 4)  :: [1, 1, 2, 2]
+amr.grid_eff(nvals = 1)  :: [0.7]
+amr.blocking_factor(nvals = 1)  :: [16]
+amr.max_grid_size(nvals = 1)  :: [64]
+max_step(nvals = 1)  :: [40000]
+stop_time(nvals = 1)  :: [.5e-1]
+ns.cfl(nvals = 1)  :: [0.1]
+ns.init_dt(nvals = 1)  :: [5.e-6]
+ns.init_shrink(nvals = 1)  :: [1.]
+ns.change_max(nvals = 1)  :: [1.1]
+ns.dt_cutoff(nvals = 1)  :: [1.e-12]
+amr.checkpoint_files_output(nvals = 1)  :: [1]
+amr.check_file(nvals = 1)  :: [chk]
+amr.check_int(nvals = 1)  :: [100]
+amr.plot_file(nvals = 1)  :: [plt]
+amr.plot_int(nvals = 1)  :: [1]
+amr.derive_plot_vars(nvals = 4)  :: [mag_vort, sumRhoYdot, mass_fractions, enthalpy]
+prob.P_mean(nvals = 1)  :: [6079500.]
+prob.part_temp(nvals = 1)  :: [363.]
+prob.part_mean_dia(nvals = 1)  :: [5E-6]
+prob.part_stdev_dia(nvals = 1)  :: [0.]
+prob.jet_dia(nvals = 1)  :: [4e-5]
+prob.spray_angle_deg(nvals = 1)  :: [21.]
+prob.jets_per_dir(nvals = 1)  :: [1]
+prob.jet_start_time(nvals = 1)  :: [0.]
+prob.jet_end_time(nvals = 1)  :: [.5E-3]
+prob.jet_vel(nvals = 1)  :: [30.]
+prob.jet_dx_mod(nvals = 1)  :: [42.]
+prob.mass_flow_rate(nvals = 1)  :: [1.0174e-5]
+peleLM.do_spray_particles(nvals = 1)  :: [1]
+particles.v(nvals = 1)  :: [1]
+particles.mom_transfer(nvals = 1)  :: [1]
+particles.mass_transfer(nvals = 1)  :: [1]
+particles.heat_transfer(nvals = 1)  :: [1]
+particles.particle_init_function(nvals = 1)  :: [1]
+particles.write_spray_ascii_files(nvals = 1)  :: [1]
+particles.parcel_size(nvals = 1)  :: [5.]
+particles.fuel_species(nvals = 1)  :: [NC12H26]
+particles.fuel_crit_temp(nvals = 1)  :: [658.2]
+particles.fuel_boil_temp(nvals = 1)  :: [489.]
+particles.fuel_ref_temp(nvals = 1)  :: [298.15]
+particles.fuel_latent(nvals = 1)  :: [3.0299E5]
+particles.fuel_cp(nvals = 1)  :: [2.207E3]
+particles.fuel_rho(nvals = 1)  :: [669.43]
+particles.use_splash_model(nvals = 1)  :: [false]
+particles.NC12H26_psat(nvals = 4)  :: [4.10549, 1625.928, -92.839, 1.E5]
+amr.refinement_indicators(nvals = 2)  :: [gradT, magvort]
+amr.gradT.max_level(nvals = 1)  :: [2]
+amr.gradT.adjacent_difference_greater(nvals = 1)  :: [.1]
+amr.gradT.field_name(nvals = 1)  :: [temp]
+amr.magvort.max_level(nvals = 1)  :: [2]
+amr.magvort.vorticity_greater(nvals = 1)  :: [1e4]
+ns.fuelName(nvals = 1)  :: [NC12H26]
+ns.unity_Le(nvals = 1)  :: [0]
+ns.hack_nochem(nvals = 1)  :: [0]
+ns.gravity(nvals = 1)  :: [0]
+ns.htt_tempmax(nvals = 1)  :: [19000.]
+peleLM.mixtureFraction.format(nvals = 1)  :: [Cantera]
+peleLM.mixtureFraction.type(nvals = 1)  :: [mole]
+peleLM.mixtureFraction.oxidTank(nvals = 2)  :: [O2:0.21, N2:0.79]
+peleLM.mixtureFraction.fuelTank(nvals = 1)  :: [NC12H26:1.]
+peleLM.chem_integrator(nvals = 1)  :: [ReactorCvode]
+ns.init_iter(nvals = 1)  :: [3]
+ns.num_divu_iters(nvals = 1)  :: [1]
+ns.sdc_iterMAX(nvals = 1)  :: [2]
+ns.num_mac_sync_iter(nvals = 1)  :: [2]
+ode.analytical_jacobian(nvals = 1)  :: [0]
+cvode.solve_type(nvals = 1)  :: [GMRES]
+active_control.on(nvals = 1)  :: [0]
+active_control.use_temp(nvals = 1)  :: [1]
+active_control.temperature(nvals = 1)  :: [800.0]
+active_control.tau(nvals = 1)  :: [1.0e-7]
+active_control.height(nvals = 1)  :: [1.000]
+active_control.v(nvals = 1)  :: [0]
+active_control.velMax(nvals = 1)  :: [50.]
+active_control.changeMax(nvals = 1)  :: [0.2]
+active_control.flameDir(nvals = 1)  :: [2]
+ns.sum_interval(nvals = 1)  :: [5]
+ns.do_reflux(nvals = 1)  :: [1]
+ns.do_mac_proj(nvals = 1)  :: [1]
+ns.do_sync_proj(nvals = 1)  :: [1]
+ns.divu_relax_factor(nvals = 1)  :: [0.0]
+ns.be_cn_theta(nvals = 1)  :: [0.5]
+ns.do_temp(nvals = 1)  :: [1]
+ns.do_diffuse_sync(nvals = 1)  :: [1]
+ns.do_reflux_visc(nvals = 1)  :: [1]
+ns.zeroBndryVisc(nvals = 1)  :: [1]
+ns.v(nvals = 1)  :: [1]
+ns.divu_ceiling(nvals = 1)  :: [1]
+ns.divu_dt_factor(nvals = 1)  :: [.4]
+ns.min_rho_divu_ceiling(nvals = 1)  :: [.01]
+ns.visc_tol(nvals = 1)  :: [1.0e-12]
+ns.visc_abs_tol(nvals = 1)  :: [1.0e-12]
+diffuse.max_order(nvals = 1)  :: [4]
+diffuse.tensor_max_order(nvals = 1)  :: [4]
+diffuse.v(nvals = 1)  :: [0]
+proj.proj_tol(nvals = 1)  :: [1.0e-12]
+proj.proj_abs_tol(nvals = 1)  :: [1.0e-12]
+proj.sync_tol(nvals = 1)  :: [1.0e-12]
+proj.rho_wgt_vel_proj(nvals = 1)  :: [0]
+proj.do_outflow_bcs(nvals = 1)  :: [0]
+proj.divu_minus_s_factor(nvals = 1)  :: [.5]
+proj.divu_minus_s_factor(nvals = 1)  :: [0.]
+proj.proj_2(nvals = 1)  :: [1]
+nodal_proj.verbose(nvals = 1)  :: [0]
+proj.v(nvals = 1)  :: [0]
+mac.mac_tol(nvals = 1)  :: [1.0e-12]
+mac.mac_sync_tol(nvals = 1)  :: [1.0e-12]
+mac.mac_abs_tol(nvals = 1)  :: [1.0e-12]
+mac.do_outflow_bcs(nvals = 1)  :: [0]
+mac.v(nvals = 1)  :: [0]
+amrex.regtest_reduction(nvals = 1)  :: [1]
+amrex.fpe_trap_invalid(nvals = 1)  :: [1]
+amrex.fpe_trap_zero(nvals = 1)  :: [1]
+amrex.fpe_trap_overflow(nvals = 1)  :: [1]
+amr.restart(nvals = 1)  :: [chk03420]
+
+... done dumping ParmParse table.
+
+ ############### Build infos ###############
+ PeleLM      git hash: v1.0.1-120-g1734300-dirty
+ AMReX       git hash: 21.11-5-g2ec7459dd-dirty
+ IAMR        git hash: 21.11
+ AMReX-Hydro git hash: 4bfc785
+ PelePhysics git hash: v0.1-949-g67e4be85
+ ###########################################
+
+ Initialization of Transport (CPP)... 
+268 Reactions in mechanism 
+53 Chemical species interpreted:
+ { NC12H26  H  O  OH  HO2  H2  H2O  H2O2  O2  CH2  CH2*  CH3  CH4  HCO  CH2O  CH3O  CO  CO2  C2H2  C2H3  C2H4  C2H5  C2H6  CH2CHO  aC3H5  C3H6  nC3H7  C2H3CHO  C4H7  C4H81  pC4H9  C5H9  C5H10  PXC5H11  C6H12  PXC6H13  C7H14  PXC7H15  C8H16  PXC8H17  C9H18  PXC9H19  C10H20  PXC10H21  PXC12H25  SXC12H25  S3XC12H25  C12H24  C12H25O2  C12OOH  O2C12H24OOH  OC12H23OOH  N2  }
+
+ fuel name NC12H26
+RhoYdot_Type, nrhoydot = 5 53
+NavierStokesBase::init_additional_state_types()::have_divu = 1
+NavierStokesBase::init_additional_state_types()::have_dsdt = 0
+NavierStokesBase::init_additional_state_types: num_state_type = 7
+PeleLM::init_once(): num_state_type = 7
+
+WARNING! Note that you can't drop data from the checkpoint file.
+ If your checkpoint file contains Average_Type, then your inputs
+ must also specify ns.avg_interval>0.
+
+Typical vals: 
+	Velocity: 0 0 0 
+	Density: 23.43915838
+	Temp:    900
+	RhoH:    639092.6751
+	Y_NC12H26: 1e-10
+	Y_H: 1e-10
+	Y_O: 1e-10
+	Y_OH: 1e-10
+	Y_HO2: 1e-10
+	Y_H2: 1e-10
+	Y_H2O: 1e-10
+	Y_H2O2: 1e-10
+	Y_O2: 0.2329175115
+	Y_CH2: 1e-10
+	Y_CH2*: 1e-10
+	Y_CH3: 1e-10
+	Y_CH4: 1e-10
+	Y_HCO: 1e-10
+	Y_CH2O: 1e-10
+	Y_CH3O: 1e-10
+	Y_CO: 1e-10
+	Y_CO2: 1e-10
+	Y_C2H2: 1e-10
+	Y_C2H3: 1e-10
+	Y_C2H4: 1e-10
+	Y_C2H5: 1e-10
+	Y_C2H6: 1e-10
+	Y_CH2CHO: 1e-10
+	Y_aC3H5: 1e-10
+	Y_C3H6: 1e-10
+	Y_nC3H7: 1e-10
+	Y_C2H3CHO: 1e-10
+	Y_C4H7: 1e-10
+	Y_C4H81: 1e-10
+	Y_pC4H9: 1e-10
+	Y_C5H9: 1e-10
+	Y_C5H10: 1e-10
+	Y_PXC5H11: 1e-10
+	Y_C6H12: 1e-10
+	Y_PXC6H13: 1e-10
+	Y_C7H14: 1e-10
+	Y_PXC7H15: 1e-10
+	Y_C8H16: 1e-10
+	Y_PXC8H17: 1e-10
+	Y_C9H18: 1e-10
+	Y_PXC9H19: 1e-10
+	Y_C10H20: 1e-10
+	Y_PXC10H21: 1e-10
+	Y_PXC12H25: 1e-10
+	Y_SXC12H25: 1e-10
+	Y_S3XC12H25: 1e-10
+	Y_C12H24: 1e-10
+	Y_C12H25O2: 1e-10
+	Y_C12OOH: 1e-10
+	Y_O2C12H24OOH: 1e-10
+	Y_OC12H23OOH: 1e-10
+	Y_N2: 0.7670824885
+
+WARNING! Note that you can't drop data from the checkpoint file.
+ If your checkpoint file contains Average_Type, then your inputs
+ must also specify ns.avg_interval>0.
+
+
+WARNING! Note that you can't drop data from the checkpoint file.
+ If your checkpoint file contains Average_Type, then your inputs
+ must also specify ns.avg_interval>0.
+
+estTimeStep :: 
+LEV = 0 UMAX = 7.864387188  6.132102785  24.70372325  
+estimated timestep: dt = 1.619189124e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.619189124e-07, 3.132836591e-06
+...estdt from particles at level 0: 1.797693135e+308
+estTimeStep :: 
+LEV = 1 UMAX = 8.204019528  8.071757291  28.22431087  
+estimated timestep: dt = 7.086089753e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.086089753e-08, 1.760735674e-06
+...estdt from particles at level 1: 1.797693135e+308
+estTimeStep :: 
+LEV = 2 UMAX = 15.82857278  13.94774974  32.59366323  
+estimated timestep: dt = 3.068081035e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.068081035e-08, 9.835302816e-07
+...estdt from particles at level 2: 1.66726286e-07
+[0] PeleLM::advance() : starting time = 0.000368722554 with dt = 1.227232414e-07
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[0]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.132595568
+[0]   SDC: 1 - computing A 
+[0]   SDC: 1 - computing D 
+[0]   SDC: 1 - computing R 
+[0]   SDC: 1 DONE 
+... predict edge velocities
+[0]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.12836714
+[0]   SDC: 2 - computing A 
+[0]   SDC: 2 - computing D 
+[0]   SDC: 2 - computing R 
+[0]   SDC: 2 DONE 
+[0]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[0]   - Nodal projection 
+estTimeStep :: 
+LEV = 0 UMAX = 7.785132434  6.091477558  24.73104008  
+estimated timestep: dt = 1.617400638e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.617400638e-07, 3.132724815e-06
+...estdt from particles at level 0: 1.797693135e+308
+[0] PeleLM::advance() : at end of time step
+[1] PeleLM::advance() : starting time = 0.000368722554 with dt = 6.136162069e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.296861487
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.300404574
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.327443733  8.184992578  28.24783324  
+estimated timestep: dt = 7.080189064e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.080189064e-08, 1.760697007e-06
+...estdt from particles at level 1: 1.797693135e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000368722554 with dt = 3.068081035e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.260257416
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.257649069
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 16.10340173  14.61719236  32.56102341  
+estimated timestep: dt = 3.07115654e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.07115654e-08, 9.703717062e-07
+...estdt from particles at level 2: 1.67415383e-07
+[2] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.0003687532348 with dt = 3.068081035e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.256499268
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.256780748
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 15.74832107  14.53639915  32.56620796  
+estimated timestep: dt = 3.070667611e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.070667611e-08, 9.584538579e-07
+...estdt from particles at level 2: 1.681243135e-07
+[2] PeleLM::advance() : at end of time step
+[1-2] Synchronization 
+[1] PeleLM::advance() : starting time = 0.0003687839156 with dt = 6.136162069e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.301764693
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.30405134
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.557436378  8.494909459  28.21051538  
+estimated timestep: dt = 7.089554988e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.089554988e-08, 1.79537799e-06
+...estdt from particles at level 1: 1.797693135e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.0003687839156 with dt = 3.068081035e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.258358788
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.25670903
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 15.36046347  14.31374294  32.55147623  
+estimated timestep: dt = 3.072057294e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.072057294e-08, 9.489244681e-07
+...estdt from particles at level 2: 1.688263083e-07
+[2] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.0003688145964 with dt = 3.068081035e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.2589165
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.257017214
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 14.98912669  14.04086367  32.50640059  
+estimated timestep: dt = 3.076317223e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.076317223e-08, 9.404622865e-07
+...estdt from particles at level 2: 1.695199877e-07
+[2] PeleLM::advance() : at end of time step
+[1-2] Synchronization 
+[0-1] Synchronization 
+THIS ONE IS CALLING SET PLOT 
+
+
+State Plot Vars: x_velocity y_velocity z_velocity density rhoh temp RhoRT gradpx gradpy gradpz divu FuncCount I_R[rhoY(NC12H26)] I_R[rhoY(H)] I_R[rhoY(O)] I_R[rhoY(OH)] I_R[rhoY(HO2)] I_R[rhoY(H2)] I_R[rhoY(H2O)] I_R[rhoY(H2O2)] I_R[rhoY(O2)] I_R[rhoY(CH2)] I_R[rhoY(CH2*)] I_R[rhoY(CH3)] I_R[rhoY(CH4)] I_R[rhoY(HCO)] I_R[rhoY(CH2O)] I_R[rhoY(CH3O)] I_R[rhoY(CO)] I_R[rhoY(CO2)] I_R[rhoY(C2H2)] I_R[rhoY(C2H3)] I_R[rhoY(C2H4)] I_R[rhoY(C2H5)] I_R[rhoY(C2H6)] I_R[rhoY(CH2CHO)] I_R[rhoY(aC3H5)] I_R[rhoY(C3H6)] I_R[rhoY(nC3H7)] I_R[rhoY(C2H3CHO)] I_R[rhoY(C4H7)] I_R[rhoY(C4H81)] I_R[rhoY(pC4H9)] I_R[rhoY(C5H9)] I_R[rhoY(C5H10)] I_R[rhoY(PXC5H11)] I_R[rhoY(C6H12)] I_R[rhoY(PXC6H13)] I_R[rhoY(C7H14)] I_R[rhoY(PXC7H15)] I_R[rhoY(C8H16)] I_R[rhoY(PXC8H17)] I_R[rhoY(C9H18)] I_R[rhoY(PXC9H19)] I_R[rhoY(C10H20)] I_R[rhoY(PXC10H21)] I_R[rhoY(PXC12H25)] I_R[rhoY(SXC12H25)] I_R[rhoY(S3XC12H25)] I_R[rhoY(C12H24)] I_R[rhoY(C12H25O2)] I_R[rhoY(C12OOH)] I_R[rhoY(O2C12H24OOH)] I_R[rhoY(OC12H23OOH)] I_R[rhoY(N2)] I_R_spray_x_velocity I_R_spray_y_velocity I_R_spray_z_velocity I_R_spray_density I_R_spray_NC12H26 I_R_spray_rhoh 
+
+Derive Plot Vars: mag_vort sumRhoYdot mass_fractions enthalpy 
+AMR PlotFileDoit 
+
+AMR CALL TO PlotFile 
+
+ goAscent at nstep 3421
+ n_data_items 65
+0000000000000000000000000000000000000000000000000000000000000000000000
+goAscent collected variables in time 0.003435939
+ everything A-ok
+goAscent setup 0.030115331
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/ascent_main_runtime.cpp : 2005]
+ added new ghost field because of nestset: topo_ghosts
+******************* LEARN *******************
+I_R[rhoY(HO2)] min -23153.7484 len 197748.0369
+I_R[rhoY(OH)] min -262692.7384 len 436020.7094
+I_R[rhoY(NC12H26)] min -10152419.27 len 10206612.24
+I_R[rhoY(H)] min -3652.959871 len 8242.548378
+I_R[rhoY(H2O2)] min -381208.4771 len 409630.218
+temp min 311.2696969 len 2691.417005
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+In rank 11
+In rank 17
+In rank 40
+In rank 18
+In rank 34
+In rank 2
+In rank 12
+In rank 21
+In rank 28
+In rank 46
+In rank 55
+In rank 10
+In rank 48
+In rank 20
+In rank 32
+In rank 3
+In rank 52
+In rank 44
+In rank 15
+In rank 37
+In rank 36
+In rank 33
+In rank 43
+In rank 8
+In rank 30
+In rank 56
+In rank 45
+In rank 53
+I_R[rhoY(HO2)] average fmms 0
+I_R[rhoY(OH)] average fmms 0
+I_R[rhoY(NC12H26)] average fmms 0
+I_R[rhoY(H)] average fmms 0
+I_R[rhoY(H2O2)] average fmms 0
+temp average fmms 0
+Spatial metric min 1.797693135e+308
+Spatial metric max -1.797693135e+308
+Spatial threshold 0.7
+In rank 0
+In rank 25
+In rank 54
+In rank 6
+In rank 22
+In rank 29
+In rank 50
+In rank 5
+In rank 38
+In rank 26
+In rank 13
+In rank 16
+In rank 9
+In rank 59
+In rank 35
+In rank 41
+In rank 49
+In rank 19
+In rank 42
+In rank 23
+In rank 31
+In rank 39
+In rank 1
+In rank 4
+In rank 58
+In rank 14
+In rank 57
+In rank 27
+In rank 51
+In rank 7
+In rank 24
+In rank 47
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003421/file_000000.hdf5 path domain_000000
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003421/file_000000.hdf5 path domain_000001
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003421/file_000001.hdf5 path domain_000002
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003421/file_000001.hdf5 path domain_000003
+
+state: 
+  domain_id: 0
+  cycle: 3421
+  time: 0.000368845277213012
+  level: 0
+topologies: 
+  topo: 
+    type: "uniform"
+    coordset: "coords"
+    elements: 
+      origin: 
+        i0: 0
+        j0: 0
+        k0: 0
+coordsets: 
+  coords: 
+    type: "uniform"
+    dims: 
+      i: 2
+      j: 2
+      k: 2
+    origin: 
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    spacing: 
+      dx: 0.00132
+      dy: 0.00132
+      dz: 0.00132
+fields: 
+  spatial_metric: 
+    association: "element"
+    topology: "topo"
+    values: 0.0
+
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003421/file_000000.hdf5 path domain_000000
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003421/file_000000.hdf5 path domain_000001
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003421/file_000000.hdf5 path domain_000002
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003421/file_000001.hdf5 path domain_000003
+goAscent action 45.38635596
+AMR CALL TO PlotFile 
+
+AMR CALL TO PlotFile 
+
+estTimeStep :: 
+LEV = 0 UMAX = 7.84971013848376  6.15967238231005  24.7039496265643  
+estimated timestep: dt = 1.61917428608208e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.61917428608208e-07, 3.26199505584292e-06
+...estdt from particles at level 0: 1.79769313486232e+308
+estTimeStep :: 
+LEV = 1 UMAX = 8.20527571926747  8.04377019584867  28.1807222443313  
+estimated timestep: dt = 7.0970501843767e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.0970501843767e-08, 1.81621253150091e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+estTimeStep :: 
+LEV = 2 UMAX = 14.9891985327683  14.0409361831164  32.5066195564952  
+estimated timestep: dt = 3.07629650096972e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.07629650096972e-08, 9.40459655697333e-07
+...estdt from particles at level 2: 1.66725293220941e-07
+Calling redistribute because grid has changed 
+[0] PeleLM::advance() : starting time = 0.000368845277213012 with dt = 1.22826764589321e-07
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[0]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.133673004999991
+[0]   SDC: 1 - computing A 
+[0]   SDC: 1 - computing D 
+[0]   SDC: 1 - computing R 
+[0]   SDC: 1 DONE 
+... predict edge velocities
+[0]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.130363439999996
+[0]   SDC: 2 - computing A 
+[0]   SDC: 2 - computing D 
+[0]   SDC: 2 - computing R 
+[0]   SDC: 2 DONE 
+[0]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[0]   - Nodal projection 
+estTimeStep :: 
+LEV = 0 UMAX = 7.77497988015594  6.12063835226576  24.7269136490606  
+estimated timestep: dt = 1.61767054989977e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.61767054989977e-07, 3.2618728522226e-06
+...estdt from particles at level 0: 1.79769313486232e+308
+[0] PeleLM::advance() : at end of time step
+[1] PeleLM::advance() : starting time = 0.000368845277213012 with dt = 6.14133822946605e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.290282547000004
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.296260160999992
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.29845533370028  8.23524410768229  28.1626209599338  
+estimated timestep: dt = 7.10161175284555e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.10161175284555e-08, 1.81616988538807e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000368845277213012 with dt = 3.07066911473303e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.38560486099999
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.374877705000017
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 15.4083972354106  14.3831326797159  32.3965298747547  
+estimated timestep: dt = 3.08675035217046e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.08675035217046e-08, 9.29544258955443e-07
+...estdt from particles at level 2: 1.67433868406823e-07
+[2] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000368875983904159 with dt = 3.07066911473303e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.388835552999979
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.376163448
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 15.1618244296336  14.1476973953493  32.4811814956224  
+estimated timestep: dt = 3.0787057426922e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.0787057426922e-08, 9.21416073974167e-07
+...estdt from particles at level 2: 1.68127925433416e-07
+[2] PeleLM::advance() : at end of time step
+[1-2] Synchronization 
+[1] PeleLM::advance() : starting time = 0.000368906690595307 with dt = 6.14133822946605e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.29436152400001
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.29490069000002
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.43467522473277  8.35542861724059  28.0988674572328  
+estimated timestep: dt = 7.11772459528503e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.11772459528503e-08, 1.80212582970059e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000368906690595307 with dt = 3.07066911473303e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.383021125000027
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.380243427999972
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 14.8526572959226  13.8388657501113  32.5733330378726  
+estimated timestep: dt = 3.06999593451893e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.06999593451893e-08, 9.16908059514623e-07
+...estdt from particles at level 2: 1.68766914319635e-07
+[2] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000368937397286454 with dt = 3.07066911473303e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.378691310000022
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.38179911200001
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 14.5309771617696  13.5034273172553  32.6564366662171  
+estimated timestep: dt = 3.06218345320723e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.06218345320723e-08, 9.14342475898101e-07
+...estdt from particles at level 2: 1.6938860796735e-07
+[2] PeleLM::advance() : at end of time step
+[1-2] Synchronization 
+[0-1] Synchronization 
+THIS ONE IS CALLING SET PLOT 
+
+AMR PlotFileDoit 
+
+AMR CALL TO PlotFile 
+
+ goAscent at nstep 3422
+ n_data_items 65
+0000000000000000000000000000000000000000000000000000000000000000000000
+goAscent collected variables in time 0.00359236299999566
+ everything A-ok
+goAscent setup 0.0233268700000053
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/ascent_main_runtime.cpp : 2005]
+ added new ghost field because of nestset: topo_ghosts
+******************* LEARN *******************
+Number of values 16384
+Number of values 16384
+I_R[rhoY(HO2)] min -22413.6559827763 len 198743.637665029
+I_R[rhoY(OH)] min -257951.589982921 len 432543.692157087
+I_R[rhoY(NC12H26)] min -10341994.6533829 len 10405003.4694805
+I_R[rhoY(H)] min -3617.90895234828 len 8313.23991985688
+I_R[rhoY(H2O2)] min -376327.392106922 len 405757.373987158
+temp min 309.037482327402 len 2712.28418155389
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 49152
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 49152
+Number of values 32768
+Number of values 65536
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 16384
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 49152
+Number of values 16384
+Number of values 65536
+Number of values 49152
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 32768
+Number of values 49152
+Number of values 16384
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 49152
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 16384
+Number of values 49152
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 8192
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 16384
+Number of values 16384
+Number of values 8192
+Number of values 32768
+In rank 21
+In rank 12
+In rank 55
+In rank 46
+In rank 10
+In rank 48
+In rank 20
+In rank 52
+In rank 28
+In rank 3
+In rank 32
+In rank 44
+In rank 30
+In rank 15
+In rank 37
+In rank 56
+In rank 45
+In rank 53
+In rank 33
+In rank 8
+In rank 54
+In rank 43
+In rank 25
+I_R[rhoY(HO2)] average fmms 2.26646685930322e-05
+I_R[rhoY(OH)] average fmms 0.000632803772673527
+I_R[rhoY(NC12H26)] average fmms 0.00175749430262294
+I_R[rhoY(H)] average fmms 0.000336996824931543
+I_R[rhoY(H2O2)] average fmms 0.00153132651454258
+temp average fmms 8.55261437106048e-05
+Spatial metric min 0.660379849834948
+Spatial metric max 0.660379849834948
+Spatial threshold 0.7
+In rank 36
+In rank 38
+In rank 50
+In rank 29
+In rank 6
+In rank 22
+In rank 13
+In rank 26
+In rank 5
+In rank 16
+In rank 19
+In rank 9
+In rank 59
+In rank 35
+In rank 41
+In rank 49
+In rank 31
+In rank 23
+In rank 39
+In rank 58
+In rank 42
+In rank 57
+In rank 17
+In rank 47
+In rank 4
+In rank 1
+In rank 27
+In rank 7
+In rank 24
+In rank 11
+In rank 51
+In rank 14
+In rank 40
+In rank 18
+In rank 2
+In rank 34
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003422/file_000000.hdf5 path domain_000000
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003422/file_000000.hdf5 path domain_000001
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003422/file_000001.hdf5 path domain_000002
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003422/file_000001.hdf5 path domain_000003
+
+state: 
+  domain_id: 0
+  cycle: 3422
+  time: 0.000368968103977601
+  level: 0
+topologies: 
+  topo: 
+    type: "uniform"
+    coordset: "coords"
+    elements: 
+      origin: 
+        i0: 32
+        j0: 0
+        k0: 64
+coordsets: 
+  coords: 
+    type: "uniform"
+    dims: 
+      i: 2
+      j: 2
+      k: 2
+    origin: 
+      x: 0.00128
+      y: 0.0
+      z: 0.00256
+    spacing: 
+      dx: 0.00132
+      dy: 0.00132
+      dz: 0.00068
+fields: 
+  spatial_metric: 
+    association: "element"
+    topology: "topo"
+    values: 0.0
+
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003422/file_000000.hdf5 path domain_000000
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003422/file_000000.hdf5 path domain_000001
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003422/file_000000.hdf5 path domain_000002
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003422/file_000001.hdf5 path domain_000003
+goAscent action 29.920993396
+AMR CALL TO PlotFile 
+
+AMR CALL TO PlotFile 
+
+estTimeStep :: 
+LEV = 0 UMAX = 7.83860153242802  6.1859767781932  24.7008013955719  
+estimated timestep: dt = 1.61938065730818e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.61938065730818e-07, 3.45118004287566e-06
+...estdt from particles at level 0: 1.79769313486232e+308
+estTimeStep :: 
+LEV = 1 UMAX = 8.20975854748259  7.8690063803176  28.081909340821  
+estimated timestep: dt = 7.1220228501084e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.1220228501084e-08, 1.80244395847997e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+estTimeStep :: 
+LEV = 2 UMAX = 14.5313943932013  13.5036843447388  32.6573964430549  
+estimated timestep: dt = 3.06209345789004e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.06209345789004e-08, 9.14338383515623e-07
+...estdt from particles at level 2: 1.6672811039589e-07
+[0] PeleLM::advance() : starting time = 0.000368968103977601 with dt = 1.22483738315602e-07
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[0]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.134396073999994
+[0]   SDC: 1 - computing A 
+[0]   SDC: 1 - computing D 
+[0]   SDC: 1 - computing R 
+[0]   SDC: 1 DONE 
+... predict edge velocities
+[0]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.128256356999998
+[0]   SDC: 2 - computing A 
+[0]   SDC: 2 - computing D 
+[0]   SDC: 2 - computing R 
+[0]   SDC: 2 DONE 
+[0]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[0]   - Nodal projection 
+estTimeStep :: 
+LEV = 0 UMAX = 7.77099867975129  6.1484414314623  24.7188238240264  
+estimated timestep: dt = 1.61819997119444e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.61819997119444e-07, 3.4510464957462e-06
+...estdt from particles at level 0: 1.79769313486232e+308
+[0] PeleLM::advance() : at end of time step
+[1] PeleLM::advance() : starting time = 0.000368968103977601 with dt = 6.12418691578008e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.290516509999975
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.296341256999995
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.21817252910891  8.10841111078088  28.0226087893846  
+estimated timestep: dt = 7.13709424783332e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.13709424783332e-08, 1.80239678090239e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000368968103977601 with dt = 3.06209345789004e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.389953520000006
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.385409673000026
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 14.9617369423182  13.761565845325  32.6932095410425  
+estimated timestep: dt = 3.05873915115191e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.05873915115191e-08, 9.09880549100247e-07
+...estdt from particles at level 2: 1.67437788388321e-07
+[2] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.00036899872491218 with dt = 3.06209345789004e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.385027331999993
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.384251323000001
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 14.7129768077108  13.5180218587193  32.7431963464383  
+estimated timestep: dt = 3.05406958263797e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.05406958263797e-08, 9.04809031612067e-07
+...estdt from particles at level 2: 1.68127439220802e-07
+[2] PeleLM::advance() : at end of time step
+[1-2] Synchronization 
+[1] PeleLM::advance() : starting time = 0.000369029345846759 with dt = 6.12418691578008e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.294414274999951
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.295038714000043
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.35990829926387  8.25815362099134  27.9304834053502  
+estimated timestep: dt = 7.16063510600354e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.16063510600354e-08, 1.81621103100544e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369029345846759 with dt = 3.06209345789004e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.391344908000065
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.385014554999998
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 14.4215183852683  13.429133021236  32.7814052317585  
+estimated timestep: dt = 3.05050986353448e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.05050986353448e-08, 9.03021488602615e-07
+...estdt from particles at level 2: 1.68791134530045e-07
+[2] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369059966781338 with dt = 3.06209345789004e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.389014984000028
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.378861776999997
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 14.1207370539241  13.2993843436655  32.7998911926357  
+estimated timestep: dt = 3.04879060155091e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.04879060155091e-08, 9.02666153685781e-07
+...estdt from particles at level 2: 1.69423021786233e-07
+[2] PeleLM::advance() : at end of time step
+[1-2] Synchronization 
+[0-1] Synchronization 
+THIS ONE IS CALLING SET PLOT 
+
+AMR PlotFileDoit 
+
+AMR CALL TO PlotFile 
+
+ goAscent at nstep 3423
+ n_data_items 65
+0000000000000000000000000000000000000000000000000000000000000000000000
+goAscent collected variables in time 0.00342587199997979
+ everything A-ok
+goAscent setup 0.0233197389999305
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/ascent_main_runtime.cpp : 2005]
+ added new ghost field because of nestset: topo_ghosts
+******************* LEARN *******************
+I_R[rhoY(HO2)] min -22917.7053612993 len 200467.111572605
+I_R[rhoY(OH)] min -254364.265512677 len 430572.22977527
+I_R[rhoY(NC12H26)] min -10551408.451881 len 10602761.0282058
+I_R[rhoY(H)] min -3602.74839627077 len 8302.28277539128
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+I_R[rhoY(H2O2)] min -374072.786599241 len 405749.236673678
+temp min 308.733301673375 len 2724.90492785127
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 49152
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 49152
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 49152
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 49152
+Number of values 65536
+Number of values 16384
+Number of values 32768
+Number of values 65536
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 49152
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 49152
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 49152
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 8192
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 16384
+Number of values 8192
+Number of values 32768
+In rank 40
+In rank 51
+In rank 2
+In rank 34
+In rank 21
+In rank 46
+In rank 12
+In rank 55
+In rank 10
+In rank 48
+In rank 20
+In rank 3
+In rank 28
+In rank 32
+In rank 30
+In rank 44
+In rank 52
+In rank 45
+In rank 33
+In rank 15
+In rank 37
+In rank 53
+In rank 56
+In rank 38
+In rank 54
+In rank 50
+In rank 25
+In rank 43
+In rank 19
+In rank 36
+In rank 13
+In rank 8
+In rank 29
+I_R[rhoY(HO2)] average fmms 0
+I_R[rhoY(OH)] average fmms 0
+I_R[rhoY(NC12H26)] average fmms 0
+I_R[rhoY(H)] average fmms 0
+I_R[rhoY(H2O2)] average fmms 0
+temp average fmms 0
+Spatial metric min 1.79769313486232e+308
+Spatial metric max -1.79769313486232e+308
+Spatial threshold 0.7
+In rank 0
+In rank 6
+In rank 22
+In rank 26
+In rank 16
+In rank 5
+In rank 35
+In rank 31
+In rank 59
+In rank 49
+In rank 9
+In rank 41
+In rank 42
+In rank 17
+In rank 23
+In rank 39
+In rank 57
+In rank 58
+In rank 4
+In rank 14
+In rank 11
+In rank 27
+In rank 1
+In rank 47
+In rank 24
+In rank 7
+In rank 18
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003423/file_000000.hdf5 path domain_000000
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003423/file_000000.hdf5 path domain_000001
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003423/file_000001.hdf5 path domain_000002
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003423/file_000001.hdf5 path domain_000003
+
+state: 
+  domain_id: 0
+  cycle: 3423
+  time: 0.000369090587715917
+  level: 0
+topologies: 
+  topo: 
+    type: "uniform"
+    coordset: "coords"
+    elements: 
+      origin: 
+        i0: 32
+        j0: 0
+        k0: 64
+coordsets: 
+  coords: 
+    type: "uniform"
+    dims: 
+      i: 2
+      j: 2
+      k: 2
+    origin: 
+      x: 0.00128
+      y: 0.0
+      z: 0.00256
+    spacing: 
+      dx: 0.00132
+      dy: 0.00132
+      dz: 0.00068
+fields: 
+  spatial_metric: 
+    association: "element"
+    topology: "topo"
+    values: 0.0
+
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003423/file_000000.hdf5 path domain_000000
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003423/file_000000.hdf5 path domain_000001
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003423/file_000000.hdf5 path domain_000002
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003423/file_000001.hdf5 path domain_000003
+goAscent action 29.3348962450001
+AMR CALL TO PlotFile 
+
+AMR CALL TO PlotFile 
+
+estTimeStep :: 
+LEV = 0 UMAX = 7.83909312779443  6.21233772310696  24.6962570110062  
+estimated timestep: dt = 1.61967864126833e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.61967864126833e-07, 3.55064046504381e-06
+...estdt from particles at level 0: 1.79769313486232e+308
+estTimeStep :: 
+LEV = 1 UMAX = 8.21700835970266  7.72537736002109  27.9195583672411  
+estimated timestep: dt = 7.1634370919945e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.1634370919945e-08, 1.74860935683101e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+estTimeStep :: 
+LEV = 2 UMAX = 14.1212291693268  13.2996110854132  32.8007874088062  
+estimated timestep: dt = 3.04870729942149e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.04870729942149e-08, 9.02662189184829e-07
+...estdt from particles at level 2: 1.66717484533656e-07
+[0] PeleLM::advance() : starting time = 0.000369090587715917 with dt = 1.2194829197686e-07
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[0]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.131489795999983
+[0]   SDC: 1 - computing A 
+[0]   SDC: 1 - computing D 
+[0]   SDC: 1 - computing R 
+[0]   SDC: 1 DONE 
+... predict edge velocities
+[0]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.130385091999983
+[0]   SDC: 2 - computing A 
+[0]   SDC: 2 - computing D 
+[0]   SDC: 2 - computing R 
+[0]   SDC: 2 DONE 
+[0]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[0]   - Nodal projection 
+estTimeStep :: 
+LEV = 0 UMAX = 7.77188900013552  6.17536094773968  24.7091469775084  
+estimated timestep: dt = 1.61883370706444e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.61883370706444e-07, 3.55055178392754e-06
+...estdt from particles at level 0: 1.79769313486232e+308
+[0] PeleLM::advance() : at end of time step
+[1] PeleLM::advance() : starting time = 0.000369090587715917 with dt = 6.09741459884298e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.298049393000042
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.297627253999963
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.23299897840453  8.0168240415818  27.8599661945479  
+estimated timestep: dt = 7.17875960808377e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.17875960808377e-08, 1.74857904530726e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369090587715917 with dt = 3.04870729942149e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.393484595000018
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.387398504999965
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 14.18542373083  13.6480672906849  32.7518919363334  
+estimated timestep: dt = 3.05325873065259e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.05325873065259e-08, 8.99098393271461e-07
+...estdt from particles at level 2: 1.67453146028493e-07
+[2] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369121074788911 with dt = 3.04870729942149e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.383652448000021
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.381661966000024
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 13.7176385058875  13.516886733599  32.7094753941122  
+estimated timestep: dt = 3.05721809338466e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.05721809338466e-08, 8.95673826612709e-07
+...estdt from particles at level 2: 1.68068228592937e-07
+[2] PeleLM::advance() : at end of time step
+[1-2] Synchronization 
+[1] PeleLM::advance() : starting time = 0.000369151561861906 with dt = 6.09741459884298e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.295520025999963
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.297448935000034
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.26216189075704  8.24252785482297  27.8369791326304  
+estimated timestep: dt = 7.18468764326373e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.18468764326373e-08, 1.70326521147726e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369151561861906 with dt = 3.04870729942149e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.39106613499996
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.380520001000036
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 13.210255942674  13.3876189502077  32.6420255871174  
+estimated timestep: dt = 3.06353537200419e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.06353537200419e-08, 8.95195790445262e-07
+...estdt from particles at level 2: 1.686613841552e-07
+[2] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.0003691820489349 with dt = 3.04870729942149e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.392222103999984
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.384190783999998
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 12.7196182461632  13.2336975691205  32.5481013457839  
+estimated timestep: dt = 3.07237583346635e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.07237583346635e-08, 8.96754789020228e-07
+...estdt from particles at level 2: 1.69221341865656e-07
+[2] PeleLM::advance() : at end of time step
+[1-2] Synchronization 
+[0-1] Synchronization 
+THIS ONE IS CALLING SET PLOT 
+
+AMR PlotFileDoit 
+
+AMR CALL TO PlotFile 
+
+ goAscent at nstep 3424
+ n_data_items 65
+0000000000000000000000000000000000000000000000000000000000000000000000
+goAscent collected variables in time 0.00340434700001424
+ everything A-ok
+goAscent setup 0.0238358960000369
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/ascent_main_runtime.cpp : 2005]
+ added new ghost field because of nestset: topo_ghosts
+******************* LEARN *******************
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+I_R[rhoY(HO2)] min -23192.4769209767 len 201490.560211937
+I_R[rhoY(OH)] min -253708.38349637 len 433751.051579428
+I_R[rhoY(NC12H26)] min -10735418.2839977 len 10782102.7948155
+I_R[rhoY(H)] min -3716.79976235423 len 8438.33882741778
+I_R[rhoY(H2O2)] min -373291.961735919 len 406722.421852079
+temp min 305.139434373874 len 2739.79028591896
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 49152
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 49152
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 49152
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 49152
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 49152
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 49152
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 49152
+Number of values 65536
+Number of values 65536
+Number of values 8192
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 16384
+Number of values 16384
+Number of values 8192
+Number of values 32768
+In rank 48
+In rank 45
+In rank 33
+In rank 15
+In rank 19
+In rank 37
+In rank 56
+In rank 53
+In rank 50
+In rank 38
+In rank 25
+In rank 13
+In rank 8
+In rank 54
+In rank 36
+In rank 43
+I_R[rhoY(HO2)] average fmms 2.32302386512744e-05
+I_R[rhoY(OH)] average fmms 0.00059880206862963
+I_R[rhoY(NC12H26)] average fmms 0.00173120400163132
+I_R[rhoY(H)] average fmms 0.000339763394702857
+I_R[rhoY(H2O2)] average fmms 0.00147396381354638
+temp average fmms 0.000199848709912768
+Spatial metric min 0.660379849834948
+Spatial metric max 0.660379849834948
+Spatial threshold 0.7
+In rank 26
+In rank 6
+In rank 22
+In rank 29
+In rank 35
+In rank 16
+In rank 5
+In rank 49
+In rank 31
+In rank 9
+In rank 59
+In rank 41
+In rank 42
+In rank 17
+In rank 23
+In rank 39
+In rank 57
+In rank 14
+In rank 24
+In rank 27
+In rank 4
+In rank 11
+In rank 58
+In rank 1
+In rank 47
+In rank 7
+In rank 18
+In rank 40
+In rank 2
+In rank 34
+In rank 51
+In rank 55
+In rank 12
+In rank 21
+In rank 3
+In rank 46
+In rank 20
+In rank 30
+In rank 28
+In rank 32
+In rank 10
+In rank 52
+In rank 44
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003424/file_000000.hdf5 path domain_000000
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003424/file_000000.hdf5 path domain_000001
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003424/file_000001.hdf5 path domain_000002
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003424/file_000001.hdf5 path domain_000003
+
+state: 
+  domain_id: 0
+  cycle: 3424
+  time: 0.000369212536007894
+  level: 0
+topologies: 
+  topo: 
+    type: "uniform"
+    coordset: "coords"
+    elements: 
+      origin: 
+        i0: 32
+        j0: 0
+        k0: 64
+coordsets: 
+  coords: 
+    type: "uniform"
+    dims: 
+      i: 2
+      j: 2
+      k: 2
+    origin: 
+      x: 0.00128
+      y: 0.0
+      z: 0.00256
+    spacing: 
+      dx: 0.00132
+      dy: 0.00132
+      dz: 0.00068
+fields: 
+  spatial_metric: 
+    association: "element"
+    topology: "topo"
+    values: 0.0
+
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003424/file_000000.hdf5 path domain_000000
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003424/file_000000.hdf5 path domain_000001
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003424/file_000000.hdf5 path domain_000002
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003424/file_000001.hdf5 path domain_000003
+goAscent action 29.253843455
+AMR CALL TO PlotFile 
+
+AMR CALL TO PlotFile 
+
+estTimeStep :: 
+LEV = 0 UMAX = 7.82663218763335  6.23575384442111  24.6899484020749  
+estimated timestep: dt = 1.62009249062013e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.62009249062013e-07, 3.56177546804252e-06
+...estdt from particles at level 0: 1.79769313486232e+308
+estTimeStep :: 
+LEV = 1 UMAX = 8.22520474414374  7.6748827501502  27.7394256604627  
+estimated timestep: dt = 7.20995461290543e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.20995461290543e-08, 1.64827808304434e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+estTimeStep :: 
+LEV = 2 UMAX = 12.720111835242  13.2339141305201  32.5489663496846  
+estimated timestep: dt = 3.07229418365137e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.07229418365137e-08, 8.96750891108171e-07
+...estdt from particles at level 2: 1.6711331783716e-07
+[0] PeleLM::advance() : starting time = 0.000369212536007894 with dt = 1.22289740540673e-07
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[0]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.134629539999992
+[0]   SDC: 1 - computing A 
+[0]   SDC: 1 - computing D 
+[0]   SDC: 1 - computing R 
+[0]   SDC: 1 DONE 
+... predict edge velocities
+[0]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.127974494999989
+[0]   SDC: 2 - computing A 
+[0]   SDC: 2 - computing D 
+[0]   SDC: 2 - computing R 
+[0]   SDC: 2 DONE 
+[0]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[0]   - Nodal projection 
+estTimeStep :: 
+LEV = 0 UMAX = 7.76031782310624  6.19846442070526  24.698279833445  
+estimated timestep: dt = 1.6195459874025e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.6195459874025e-07, 3.56168263350771e-06
+...estdt from particles at level 0: 1.79769313486232e+308
+[0] PeleLM::advance() : at end of time step
+[1] PeleLM::advance() : starting time = 0.000369212536007894 with dt = 6.11448702703363e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.300772171999938
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.300796237999975
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.2385988361534  7.96025231267658  27.8162891372903  
+estimated timestep: dt = 7.19003167578819e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.19003167578819e-08, 1.64824284077038e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369212536007894 with dt = 3.05724351351682e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.394400186999974
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.385758273000079
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 13.1212777838557  14.1567336390541  32.5207298304512  
+estimated timestep: dt = 3.07496174044543e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.07496174044543e-08, 8.94315712400663e-07
+...estdt from particles at level 2: 1.67768982309778e-07
+[2] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369243108443029 with dt = 3.05724351351682e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.395574160000024
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.386217881999983
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 12.7639608240975  14.1752402434627  32.5733094577989  
+estimated timestep: dt = 3.06999815691302e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.06999815691302e-08, 8.92370633638838e-07
+...estdt from particles at level 2: 1.68435012682335e-07
+[2] PeleLM::advance() : at end of time step
+[1-2] Synchronization 
+[1] PeleLM::advance() : starting time = 0.000369273680878164 with dt = 6.11448702703363e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.294022562000009
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.297309232999964
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.26434587960962  8.10740315786644  27.869512015797  
+estimated timestep: dt = 7.17630075067823e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.17630075067823e-08, 1.63425847071612e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369273680878164 with dt = 3.05724351351682e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.394886154999995
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.385376874999906
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 12.5694885098061  14.0680086796111  32.628325750335  
+estimated timestep: dt = 3.06482167565626e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.06482167565626e-08, 8.94255650869486e-07
+...estdt from particles at level 2: 1.69084019815402e-07
+[2] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369304253313299 with dt = 3.05724351351682e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.384877404999997
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.389517813999987
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 12.4556881426745  13.9092202261811  32.6772134814252  
+estimated timestep: dt = 3.06023645672368e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.06023645672368e-08, 8.7654279367897e-07
+...estdt from particles at level 2: 1.69702926866747e-07
+[2] PeleLM::advance() : at end of time step
+[1-2] Synchronization 
+[0-1] Synchronization 
+TIME= 0.000369334825748435 MASS= 1.56374462374259e-06 FUELMASS= 3.90147936020138e-10 PRODUCTMASS= 5.4840162310475e-10
+TIME= 0.000369334825748435 LEV= 0 RHOH= 0.738250268322245
+TIME= 0.000369334825748435 LEV= 1 RHOH= 0.197815705351658
+TIME= 0.000369334825748435 LEV= 2 RHOH= 0.0588294159640442
+TIME= 0.000369334825748435 RHO*TEMP= 0.00141532432945962
+TIME= 0.000369334825748435 min,max temp = 304.594479849681, 3055.55974818071
+TIME= 0.000369334825748435 min,max xvel  = -12.4562043713095, 11.9407024761802
+TIME= 0.000369334825748435 min,max yvel  = -12.7893529607522, 13.9094741620641
+TIME= 0.000369334825748435 min,max zvel  = -3.99807233734353, 32.6781710965055
+TIME= 0.000369334825748435 min,max rho-sum rho Y_l = -0.170511483338844, 1.55715440541826e-10
+TIME= 0.000369334825748435 min,max sum RhoYdot = -2.81447025468294e-06, 2.95875768348911e-06
+THIS ONE IS CALLING SET PLOT 
+
+AMR PlotFileDoit 
+
+AMR CALL TO PlotFile 
+
+ goAscent at nstep 3425
+ n_data_items 65
+0000000000000000000000000000000000000000000000000000000000000000000000
+goAscent collected variables in time 0.00343638899994403
+ everything A-ok
+goAscent setup 0.0239947460000849
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/ascent_main_runtime.cpp : 2005]
+ added new ghost field because of nestset: topo_ghosts
+******************* LEARN *******************
+I_R[rhoY(HO2)] min -26658.9016449809 len 202977.12157243
+I_R[rhoY(OH)] min -248406.640386174 len 432346.403299702
+I_R[rhoY(NC12H26)] min -10869651.0079499 len 10915951.5313927
+I_R[rhoY(H)] min -4138.23359256707 len 8775.13253432201
+I_R[rhoY(H2O2)] min -368603.823997167 len 402441.18349539
+temp min 304.594479849681 len 2750.96526833103
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 16384
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 49152
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 49152
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 49152
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 49152
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 49152
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 32768
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 49152
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 49152
+Number of values 8192
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 8192
+Number of values 32768
+Number of values 32768
+In rank 15
+In rank 37
+In rank 25
+In rank 13
+In rank 56
+In rank 53
+In rank 35
+In rank 50
+In rank 8
+I_R[rhoY(HO2)] average fmms 0
+I_R[rhoY(OH)] average fmms 0
+I_R[rhoY(NC12H26)] average fmms 0
+I_R[rhoY(H)] average fmms 0
+I_R[rhoY(H2O2)] average fmms 0
+temp average fmms 0
+Spatial metric min 1.79769313486232e+308
+Spatial metric max -1.79769313486232e+308
+Spatial threshold 0.7
+In rank 0
+In rank 26
+In rank 31
+In rank 54
+In rank 22
+In rank 43
+In rank 29
+In rank 38
+In rank 16
+In rank 36
+In rank 6
+In rank 49
+In rank 41
+In rank 59
+In rank 5
+In rank 42
+In rank 9
+In rank 24
+In rank 23
+In rank 39
+In rank 17
+In rank 27
+In rank 14
+In rank 57
+In rank 4
+In rank 58
+In rank 11
+In rank 18
+In rank 47
+In rank 1
+In rank 2
+In rank 7
+In rank 34
+In rank 40
+In rank 55
+In rank 21
+In rank 12
+In rank 51
+In rank 3
+In rank 46
+In rank 32
+In rank 30
+In rank 20
+In rank 28
+In rank 19
+In rank 44
+In rank 52
+In rank 45
+In rank 10
+In rank 33
+In rank 48
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003425/file_000000.hdf5 path domain_000000
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003425/file_000000.hdf5 path domain_000001
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003425/file_000001.hdf5 path domain_000002
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003425/file_000001.hdf5 path domain_000003
+
+state: 
+  domain_id: 0
+  cycle: 3425
+  time: 0.000369334825748435
+  level: 0
+topologies: 
+  topo: 
+    type: "uniform"
+    coordset: "coords"
+    elements: 
+      origin: 
+        i0: 32
+        j0: 0
+        k0: 64
+coordsets: 
+  coords: 
+    type: "uniform"
+    dims: 
+      i: 2
+      j: 2
+      k: 2
+    origin: 
+      x: 0.00128
+      y: 0.0
+      z: 0.00256
+    spacing: 
+      dx: 0.00132
+      dy: 0.00132
+      dz: 0.00068
+fields: 
+  spatial_metric: 
+    association: "element"
+    topology: "topo"
+    values: 0.0
+
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003425/file_000000.hdf5 path domain_000000
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003425/file_000000.hdf5 path domain_000001
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003425/file_000000.hdf5 path domain_000002
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003425/file_000001.hdf5 path domain_000003
+goAscent action 29.714123601
+AMR CALL TO PlotFile 
+
+AMR CALL TO PlotFile 
+
+estTimeStep :: 
+LEV = 0 UMAX = 7.80664369375135  6.2570539628444  24.679391471569  
+estimated timestep: dt = 1.62078550624235e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.62078550624235e-07, 3.54938565453681e-06
+...estdt from particles at level 0: 1.79769313486232e+308
+estTimeStep :: 
+LEV = 1 UMAX = 8.22487771972275  7.48619057921326  27.8835672562641  
+estimated timestep: dt = 7.17268340029447e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.17268340029447e-08, 1.62958892981395e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+estTimeStep :: 
+LEV = 2 UMAX = 12.4562043713095  13.9094741620641  32.6781710965055  
+estimated timestep: dt = 3.06014677824775e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.06014677824775e-08, 8.7653278887256e-07
+...estdt from particles at level 2: 1.66960557903261e-07
+Calling redistribute because grid has changed 
+[0] PeleLM::advance() : starting time = 0.000369334825748435 with dt = 1.2240587112991e-07
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[0]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.133346652
+[0]   SDC: 1 - computing A 
+[0]   SDC: 1 - computing D 
+[0]   SDC: 1 - computing R 
+[0]   SDC: 1 DONE 
+... predict edge velocities
+[0]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.129003454999975
+[0]   SDC: 2 - computing A 
+[0]   SDC: 2 - computing D 
+[0]   SDC: 2 - computing R 
+[0]   SDC: 2 DONE 
+[0]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[0]   - Nodal projection 
+estTimeStep :: 
+LEV = 0 UMAX = 7.74227572940493  6.2192157237947  24.6841197214833  
+estimated timestep: dt = 1.62047504433333e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.62047504433333e-07, 3.54919734191569e-06
+...estdt from particles at level 0: 1.79769313486232e+308
+[0] PeleLM::advance() : at end of time step
+[1] PeleLM::advance() : starting time = 0.000369334825748435 with dt = 6.12029355649551e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.299088589999997
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.299587410000072
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.23519715772257  7.82279263319242  27.9262364937872  
+estimated timestep: dt = 7.16172406706126e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.16172406706126e-08, 1.62954646207002e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369334825748435 with dt = 3.06014677824775e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.385256379000111
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.37923491000015
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 13.1868495396928  14.7081445980518  32.6873782494329  
+estimated timestep: dt = 3.05928481742751e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.05928481742751e-08, 8.70608692474602e-07
+...estdt from particles at level 2: 1.6763897707861e-07
+[2] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369365427216217 with dt = 3.06014677824775e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.382617878000019
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.373786334999977
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 13.14539950047  14.6365086575111  32.7049414434639  
+estimated timestep: dt = 3.05764192156916e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.05764192156916e-08, 8.55484721605047e-07
+...estdt from particles at level 2: 1.68337197237477e-07
+[2] PeleLM::advance() : at end of time step
+[1-2] Synchronization 
+[1] PeleLM::advance() : starting time = 0.000369396028684 with dt = 6.12029355649551e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.293100384999889
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.299587917999816
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.25876566562587  8.00186629769687  27.9654369074723  
+estimated timestep: dt = 7.15168515556289e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.15168515556289e-08, 1.67932369101078e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369396028684 with dt = 3.06014677824775e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.384857080000074
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.372832049999943
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 12.9976165743619  14.4656685605062  32.7061041677381  
+estimated timestep: dt = 3.05753322031677e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.05753322031677e-08, 8.36285883869274e-07
+...estdt from particles at level 2: 1.68959789125174e-07
+[2] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369426630151782 with dt = 3.06014677824775e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.371716488000175
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.375120480000078
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 12.8058974738411  14.2552540316536  32.6779777151203  
+estimated timestep: dt = 3.06016488755145e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.06016488755145e-08, 8.22448518154829e-07
+...estdt from particles at level 2: 1.69501885073844e-07
+[2] PeleLM::advance() : at end of time step
+[1-2] Synchronization 
+[0-1] Synchronization 
+THIS ONE IS CALLING SET PLOT 
+
+AMR PlotFileDoit 
+
+AMR CALL TO PlotFile 
+
+ goAscent at nstep 3426
+ n_data_items 65
+0000000000000000000000000000000000000000000000000000000000000000000000
+goAscent collected variables in time 0.0033389470002021
+ everything A-ok
+goAscent setup 0.0193296509999072
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/ascent_main_runtime.cpp : 2005]
+ added new ghost field because of nestset: topo_ghosts
+******************* LEARN *******************
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+I_R[rhoY(HO2)] min -24488.4616616373 len 198229.378381263
+I_R[rhoY(OH)] min -245913.868528636 len 431561.344853
+I_R[rhoY(NC12H26)] min -10921401.6222303 len 10961656.9690438
+I_R[rhoY(H)] min -4390.91244261398 len 8937.1906975969
+I_R[rhoY(H2O2)] min -366254.960320312 len 398449.521296103
+temp min 303.888720625892 len 2761.58754159521
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 49152
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 16384
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 49152
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 16384
+Number of values 16384
+Number of values 65536
+Number of values 32768
+In rank 14
+In rank 17
+In rank 39
+In rank 4
+In rank 11
+In rank 58
+In rank 1
+In rank 34
+In rank 7
+In rank 2
+In rank 18
+In rank 55
+In rank 21
+In rank 40
+In rank 47
+In rank 3
+In rank 12
+In rank 51
+In rank 19
+In rank 46
+In rank 32
+In rank 30
+In rank 28
+In rank 20
+In rank 52
+In rank 33
+In rank 44
+In rank 45
+In rank 10
+In rank 48
+In rank 56
+In rank 37
+In rank 35
+In rank 15
+In rank 53
+I_R[rhoY(HO2)] average fmms 0
+I_R[rhoY(OH)] average fmms 0
+I_R[rhoY(NC12H26)] average fmms 0
+I_R[rhoY(H)] average fmms 0
+I_R[rhoY(H2O2)] average fmms 0
+temp average fmms 0
+Spatial metric min 1.79769313486232e+308
+Spatial metric max -1.79769313486232e+308
+Spatial threshold 0.7
+In rank 0
+In rank 50
+In rank 25
+In rank 13
+In rank 8
+In rank 16
+In rank 31
+In rank 43
+In rank 6
+In rank 54
+In rank 41
+In rank 26
+In rank 22
+In rank 38
+In rank 49
+In rank 29
+In rank 36
+In rank 5
+In rank 42
+In rank 9
+In rank 59
+In rank 27
+In rank 57
+In rank 24
+In rank 23
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003426/file_000000.hdf5 path domain_000000
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003426/file_000000.hdf5 path domain_000001
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003426/file_000001.hdf5 path domain_000002
+
+state: 
+  domain_id: 0
+  cycle: 3426
+  time: 0.000369457231619565
+  level: 0
+topologies: 
+  topo: 
+    type: "uniform"
+    coordset: "coords"
+    elements: 
+      origin: 
+        i0: 32
+        j0: 0
+        k0: 64
+coordsets: 
+  coords: 
+    type: "uniform"
+    dims: 
+      i: 2
+      j: 2
+      k: 2
+    origin: 
+      x: 0.00128
+      y: 0.0
+      z: 0.00256
+    spacing: 
+      dx: 0.00132
+      dy: 0.00132
+      dz: 0.00068
+fields: 
+  spatial_metric: 
+    association: "element"
+    topology: "topo"
+    values: 0.0
+
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003426/file_000000.hdf5 path domain_000000
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003426/file_000000.hdf5 path domain_000001
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003426/file_000000.hdf5 path domain_000002
+goAscent action 29.8587815649998
+AMR CALL TO PlotFile 
+
+AMR CALL TO PlotFile 
+
+estTimeStep :: 
+LEV = 0 UMAX = 7.78227259979713  6.27603975124454  24.6644785348382  
+estimated timestep: dt = 1.62176548527067e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.62176548527067e-07, 3.42294467416418e-06
+...estdt from particles at level 0: 1.79769313486232e+308
+estTimeStep :: 
+LEV = 1 UMAX = 8.2205599948647  7.39847528453737  27.9795314162414  
+estimated timestep: dt = 7.148082540221e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.148082540221e-08, 1.71401845077143e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+estTimeStep :: 
+LEV = 2 UMAX = 12.8062545801306  14.2554143836771  32.6789275916695  
+estimated timestep: dt = 3.06007593791089e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.06007593791089e-08, 8.22438950851667e-07
+...estdt from particles at level 2: 1.66667294292982e-07
+[0] PeleLM::advance() : starting time = 0.000369457231619565 with dt = 1.22301328812671e-07
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[0]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.135126313000001
+[0]   SDC: 1 - computing A 
+[0]   SDC: 1 - computing D 
+[0]   SDC: 1 - computing R 
+[0]   SDC: 1 DONE 
+... predict edge velocities
+[0]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.128791958999955
+[0]   SDC: 2 - computing A 
+[0]   SDC: 2 - computing D 
+[0]   SDC: 2 - computing R 
+[0]   SDC: 2 DONE 
+[0]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[0]   - Nodal projection 
+estTimeStep :: 
+LEV = 0 UMAX = 7.72045048321806  6.23744190003341  24.6664777254155  
+estimated timestep: dt = 1.62163404298236e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.62163404298236e-07, 3.42275639849851e-06
+...estdt from particles at level 0: 1.79769313486232e+308
+[0] PeleLM::advance() : at end of time step
+[1] PeleLM::advance() : starting time = 0.000369457231619565 with dt = 6.11506644063354e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.300327632000062
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.299539032000212
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.22780673099409  7.7293058615609  27.9969002592502  
+estimated timestep: dt = 7.14364798059814e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.14364798059814e-08, 1.71400861174011e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369457231619565 with dt = 3.05753322031677e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.385489959999859
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.377528732999963
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 13.3345951504534  14.9991291662169  32.5973238896835  
+estimated timestep: dt = 3.06773649083655e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.06773649083655e-08, 8.27441971688989e-07
+...estdt from particles at level 2: 1.67290690966288e-07
+[2] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369487806951768 with dt = 3.05753322031677e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.387647797
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.378888506000067
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 13.1820214887648  14.9076516006195  32.5154150726695  
+estimated timestep: dt = 3.07546435364603e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.07546435364603e-08, 8.27086660871333e-07
+...estdt from particles at level 2: 1.67923221040262e-07
+[2] PeleLM::advance() : at end of time step
+[1-2] Synchronization 
+[1] PeleLM::advance() : starting time = 0.000369518382283971 with dt = 6.11506644063354e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.292670675999943
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.300918108000133
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.24952645503766  7.92516316599574  28.005900487263  
+estimated timestep: dt = 7.1413522336466e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.1413522336466e-08, 1.69974641755744e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369518382283971 with dt = 3.05753322031677e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.386730655000065
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.372099645999924
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 12.9248456217881  14.7214836098057  32.4131663668056  
+estimated timestep: dt = 3.08516603618245e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.08516603618245e-08, 8.18299071616756e-07
+...estdt from particles at level 2: 1.6852542086602e-07
+[2] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369548957616174 with dt = 3.05753322031677e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.37540117399999
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.376829205000149
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 12.651233041477  14.5134989688705  32.3314115912673  
+estimated timestep: dt = 3.09296733666309e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.09296733666309e-08, 8.11676387650268e-07
+...estdt from particles at level 2: 1.69116133162658e-07
+[2] PeleLM::advance() : at end of time step
+[1-2] Synchronization 
+[0-1] Synchronization 
+THIS ONE IS CALLING SET PLOT 
+
+AMR PlotFileDoit 
+
+AMR CALL TO PlotFile 
+
+ goAscent at nstep 3427
+ n_data_items 65
+0000000000000000000000000000000000000000000000000000000000000000000000
+goAscent collected variables in time 0.00340721799989296
+ everything A-ok
+goAscent setup 0.0193971359999523
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/ascent_main_runtime.cpp : 2005]
+ added new ghost field because of nestset: topo_ghosts
+******************* LEARN *******************
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+I_R[rhoY(HO2)] min -25382.119988161 len 194702.302018376
+I_R[rhoY(OH)] min -247096.082702847 len 439702.446334284
+I_R[rhoY(NC12H26)] min -10985539.1404769 len 11031794.9147748
+I_R[rhoY(H)] min -4313.57253113827 len 8727.09758366726
+I_R[rhoY(H2O2)] min -364195.583763117 len 397383.296008617
+temp min 301.2252653415 len 2773.72386056365
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 16384
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 49152
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 16384
+Number of values 49152
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 65536
+Number of values 16384
+Number of values 16384
+Number of values 65536
+Number of values 32768
+In rank 45
+In rank 10
+In rank 56
+In rank 48
+In rank 35
+In rank 50
+In rank 25
+In rank 16
+I_R[rhoY(HO2)] average fmms 0
+I_R[rhoY(OH)] average fmms 0
+I_R[rhoY(NC12H26)] average fmms 0
+I_R[rhoY(H)] average fmms 0
+I_R[rhoY(H2O2)] average fmms 0
+temp average fmms 0
+Spatial metric min 1.79769313486232e+308
+Spatial metric max -1.79769313486232e+308
+Spatial threshold 0.7
+In rank 0
+In rank 31
+In rank 53
+In rank 15
+In rank 37
+In rank 8
+In rank 13
+In rank 41
+In rank 49
+In rank 43
+In rank 29
+In rank 6
+In rank 54
+In rank 22
+In rank 26
+In rank 5
+In rank 38
+In rank 36
+In rank 9
+In rank 42
+In rank 4
+In rank 57
+In rank 11
+In rank 14
+In rank 59
+In rank 58
+In rank 27
+In rank 23
+In rank 1
+In rank 55
+In rank 24
+In rank 39
+In rank 40
+In rank 34
+In rank 18
+In rank 17
+In rank 7
+In rank 2
+In rank 21
+In rank 47
+In rank 19
+In rank 3
+In rank 12
+In rank 32
+In rank 51
+In rank 30
+In rank 46
+In rank 33
+In rank 28
+In rank 20
+In rank 52
+In rank 44
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003427/file_000000.hdf5 path domain_000000
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003427/file_000000.hdf5 path domain_000001
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003427/file_000001.hdf5 path domain_000002
+
+state: 
+  domain_id: 0
+  cycle: 3427
+  time: 0.000369579532948377
+  level: 0
+topologies: 
+  topo: 
+    type: "uniform"
+    coordset: "coords"
+    elements: 
+      origin: 
+        i0: 32
+        j0: 0
+        k0: 64
+coordsets: 
+  coords: 
+    type: "uniform"
+    dims: 
+      i: 2
+      j: 2
+      k: 2
+    origin: 
+      x: 0.00128
+      y: 0.0
+      z: 0.00256
+    spacing: 
+      dx: 0.00132
+      dy: 0.00132
+      dz: 0.00068
+fields: 
+  spatial_metric: 
+    association: "element"
+    topology: "topo"
+    values: 0.0
+
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003427/file_000000.hdf5 path domain_000000
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003427/file_000000.hdf5 path domain_000001
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003427/file_000000.hdf5 path domain_000002
+goAscent action 29.583793882
+AMR CALL TO PlotFile 
+
+AMR CALL TO PlotFile 
+
+estTimeStep :: 
+LEV = 0 UMAX = 7.75465151761412  6.2919850088061  24.6435129818037  
+estimated timestep: dt = 1.62314520780926e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.62314520780926e-07, 3.33156244735261e-06
+...estdt from particles at level 0: 1.79769313486232e+308
+estTimeStep :: 
+LEV = 1 UMAX = 8.21430944931469  7.26759725873769  28.022598092954  
+estimated timestep: dt = 7.13709697211438e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.13709697211438e-08, 1.67811025562508e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+estTimeStep :: 
+LEV = 2 UMAX = 12.6516104684499  14.513825943486  32.3324639516185  
+estimated timestep: dt = 3.09286666644514e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.09286666644514e-08, 8.11666629991297e-07
+...estdt from particles at level 2: 1.66782065192213e-07
+[0] PeleLM::advance() : starting time = 0.000369579532948377 with dt = 1.23019740713505e-07
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[0]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.13562961699995
+[0]   SDC: 1 - computing A 
+[0]   SDC: 1 - computing D 
+[0]   SDC: 1 - computing R 
+[0]   SDC: 1 DONE 
+... predict edge velocities
+[0]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.129412757999944
+[0]   SDC: 2 - computing A 
+[0]   SDC: 2 - computing D 
+[0]   SDC: 2 - computing R 
+[0]   SDC: 2 DONE 
+[0]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[0]   - Nodal projection 
+estTimeStep :: 
+LEV = 0 UMAX = 7.69460349952164  6.25231294003561  24.6514236623627  
+estimated timestep: dt = 1.62262433796354e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.62262433796354e-07, 3.33137100665981e-06
+...estdt from particles at level 0: 1.79769313486232e+308
+[0] PeleLM::advance() : at end of time step
+[1] PeleLM::advance() : starting time = 0.000369579532948377 with dt = 6.15098703567525e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.300111406000042
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.30040234199987
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.21783159541985  7.65395510385995  28.0004942118033  
+estimated timestep: dt = 7.14273107064276e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.14273107064276e-08, 1.67809935629254e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369579532948377 with dt = 3.07549351783763e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.392235617000097
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.390671572999963
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 13.5807243416256  15.0206012903694  32.3427784472295  
+estimated timestep: dt = 3.09188031458583e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.09188031458583e-08, 8.1745093708228e-07
+...estdt from particles at level 2: 1.67532912978699e-07
+[2] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369610287883556 with dt = 3.07549351783763e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.394798560999789
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.387498504000177
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 13.4756009574672  14.7351418519281  32.3738866225018  
+estimated timestep: dt = 3.08890931651357e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.08890931651357e-08, 8.23892654667721e-07
+...estdt from particles at level 2: 1.68258268991726e-07
+[2] PeleLM::advance() : at end of time step
+[1-2] Synchronization 
+[1] PeleLM::advance() : starting time = 0.000369641042818734 with dt = 6.15098703567525e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.293746365000061
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.301367099000117
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.24056142262746  7.84168089534635  27.9924341871616  
+estimated timestep: dt = 7.14478771880894e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.14478771880894e-08, 1.66208540231838e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369641042818734 with dt = 3.07549351783763e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.398804866000091
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.388212586999998
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 13.280961814971  14.3630645301293  32.4015547133482  
+estimated timestep: dt = 3.08627165840298e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.08627165840298e-08, 8.17486766171123e-07
+...estdt from particles at level 2: 1.68975020246796e-07
+[2] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369671797753912 with dt = 3.07549351783763e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.387396795000086
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.389025133000132
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 13.0562220439384  13.9827640299246  32.4257957874959  
+estimated timestep: dt = 3.08396440461647e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.08396440461647e-08, 8.13276879754379e-07
+...estdt from particles at level 2: 1.69680458332465e-07
+[2] PeleLM::advance() : at end of time step
+[1-2] Synchronization 
+[0-1] Synchronization 
+THIS ONE IS CALLING SET PLOT 
+
+AMR PlotFileDoit 
+
+AMR CALL TO PlotFile 
+
+ goAscent at nstep 3428
+ n_data_items 65
+0000000000000000000000000000000000000000000000000000000000000000000000
+goAscent collected variables in time 0.00336545899995144
+ everything A-ok
+goAscent setup 0.0194922139999107
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/ascent_main_runtime.cpp : 2005]
+ added new ghost field because of nestset: topo_ghosts
+******************* LEARN *******************
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+I_R[rhoY(HO2)] min -25961.5723608189 len 195455.472503255
+I_R[rhoY(OH)] min -245527.448973434 len 435607.617689454
+I_R[rhoY(NC12H26)] min -10993140.35348 len 11037159.7230928
+I_R[rhoY(H)] min -4100.46611530293 len 8321.90465662734
+I_R[rhoY(H2O2)] min -359891.975975035 len 394366.915460658
+temp min 301.98444018947 len 2782.08765700965
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 16384
+Number of values 16384
+Number of values 65536
+Number of values 32768
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 16384
+Number of values 49152
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 49152
+Number of values 32768
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+In rank 45
+In rank 10
+In rank 56
+In rank 31
+In rank 35
+In rank 48
+In rank 16
+In rank 50
+In rank 53
+In rank 15
+In rank 37
+In rank 8
+I_R[rhoY(HO2)] average fmms 0
+I_R[rhoY(OH)] average fmms 0
+I_R[rhoY(NC12H26)] average fmms 0
+I_R[rhoY(H)] average fmms 0
+I_R[rhoY(H2O2)] average fmms 0
+temp average fmms 0
+Spatial metric min 1.79769313486232e+308
+Spatial metric max -1.79769313486232e+308
+Spatial threshold 0.7
+In rank 0
+In rank 13
+In rank 49
+In rank 25
+In rank 6
+In rank 41
+In rank 22
+In rank 54
+In rank 43
+In rank 29
+In rank 26
+In rank 36
+In rank 38
+In rank 5
+In rank 9
+In rank 57
+In rank 34
+In rank 58
+In rank 4
+In rank 42
+In rank 11
+In rank 23
+In rank 18
+In rank 39
+In rank 55
+In rank 14
+In rank 24
+In rank 2
+In rank 40
+In rank 59
+In rank 1
+In rank 17
+In rank 27
+In rank 7
+In rank 19
+In rank 21
+In rank 47
+In rank 30
+In rank 3
+In rank 32
+In rank 51
+In rank 12
+In rank 46
+In rank 33
+In rank 20
+In rank 28
+In rank 44
+In rank 52
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003428/file_000000.hdf5 path domain_000000
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003428/file_000000.hdf5 path domain_000001
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003428/file_000001.hdf5 path domain_000002
+
+state: 
+  domain_id: 0
+  cycle: 3428
+  time: 0.000369702552689091
+  level: 0
+topologies: 
+  topo: 
+    type: "uniform"
+    coordset: "coords"
+    elements: 
+      origin: 
+        i0: 32
+        j0: 0
+        k0: 64
+coordsets: 
+  coords: 
+    type: "uniform"
+    dims: 
+      i: 2
+      j: 2
+      k: 2
+    origin: 
+      x: 0.00128
+      y: 0.0
+      z: 0.00256
+    spacing: 
+      dx: 0.00132
+      dy: 0.00132
+      dz: 0.00068
+fields: 
+  spatial_metric: 
+    association: "element"
+    topology: "topo"
+    values: 0.0
+
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003428/file_000000.hdf5 path domain_000000
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003428/file_000000.hdf5 path domain_000001
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003428/file_000000.hdf5 path domain_000002
+goAscent action 29.671920364
+AMR CALL TO PlotFile 
+
+AMR CALL TO PlotFile 
+
+estTimeStep :: 
+LEV = 0 UMAX = 7.72601851789535  6.30721990422092  24.6173876929733  
+estimated timestep: dt = 1.62486777634077e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.62486777634077e-07, 3.25345939128259e-06
+...estdt from particles at level 0: 1.79769313486232e+308
+estTimeStep :: 
+LEV = 1 UMAX = 8.20703391019869  7.14341790648592  28.0058097151059  
+estimated timestep: dt = 7.14137538012777e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.14137538012777e-08, 1.63986250765616e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+estTimeStep :: 
+LEV = 2 UMAX = 13.056641176741  13.9831824865352  32.426828143235  
+estimated timestep: dt = 3.08386622207643e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.08386622207643e-08, 8.13266819922703e-07
+...estdt from particles at level 2: 1.66666844903283e-07
+[0] PeleLM::advance() : starting time = 0.000369702552689091 with dt = 1.23354648883057e-07
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[0]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.137046906000023
+[0]   SDC: 1 - computing A 
+[0]   SDC: 1 - computing D 
+[0]   SDC: 1 - computing R 
+[0]   SDC: 1 DONE 
+... predict edge velocities
+[0]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.129273592000118
+[0]   SDC: 2 - computing A 
+[0]   SDC: 2 - computing D 
+[0]   SDC: 2 - computing R 
+[0]   SDC: 2 DONE 
+[0]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[0]   - Nodal projection 
+estTimeStep :: 
+LEV = 0 UMAX = 7.6686929770019  6.26660123279762  24.6464688234922  
+estimated timestep: dt = 1.62295054461811e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.62295054461811e-07, 3.25326503749444e-06
+...estdt from particles at level 0: 1.79769313486232e+308
+[0] PeleLM::advance() : at end of time step
+[1] PeleLM::advance() : starting time = 0.000369702552689091 with dt = 6.16773244415287e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.29977696800006
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.301748449000115
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.20712585867933  7.5289153993455  28.0430988303448  
+estimated timestep: dt = 7.131879440641e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.131879440641e-08, 1.63985033516939e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369702552689091 with dt = 3.08386622207643e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.393193076999978
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.393448217000014
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 13.9349346865381  14.2638064206168  32.4258201865558  
+estimated timestep: dt = 3.08396208406353e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.08396208406353e-08, 8.17012897070437e-07
+...estdt from particles at level 2: 1.67324983557948e-07
+[2] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369733391351311 with dt = 3.08386622207643e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.39130162299989
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.383426637999946
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 13.8423213983463  13.8421324782038  32.4317089341041  
+estimated timestep: dt = 3.08340211745189e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.08340211745189e-08, 8.26238996380863e-07
+...estdt from particles at level 2: 1.67990409980837e-07
+[2] PeleLM::advance() : at end of time step
+[1-2] Synchronization 
+[1] PeleLM::advance() : starting time = 0.000369764230013532 with dt = 6.16773244415287e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.304377702000011
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.299982611999894
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.2288345321171  7.66691371742043  28.0746074428697  
+estimated timestep: dt = 7.12387521025855e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.12387521025855e-08, 1.62889771995416e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369764230013532 with dt = 3.08386622207643e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.396912576000204
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.384752785000046
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 13.6531094090857  13.3776124901483  32.4125427312759  
+estimated timestep: dt = 3.08522539651006e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.08522539651006e-08, 8.21730560481603e-07
+...estdt from particles at level 2: 1.68630243915899e-07
+[2] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369795068675753 with dt = 3.08386622207643e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.383675485999902
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.382731577999948
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+[2]   SDC: 2 DONE 
+[2]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[2]   - Nodal projection 
+estTimeStep :: 
+LEV = 2 UMAX = 13.4443782204459  12.9242442821083  32.3659151498265  
+estimated timestep: dt = 3.0896700908065e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.0896700908065e-08, 8.18279667362129e-07
+...estdt from particles at level 2: 1.69236680603441e-07
+[2] PeleLM::advance() : at end of time step
+[1-2] Synchronization 
+[0-1] Synchronization 
+THIS ONE IS CALLING SET PLOT 
+
+AMR PlotFileDoit 
+
+AMR CALL TO PlotFile 
+
+ goAscent at nstep 3429
+ n_data_items 65
+0000000000000000000000000000000000000000000000000000000000000000000000
+goAscent collected variables in time 0.0033645250000518
+ everything A-ok
+goAscent setup 0.0196484440000404
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/ascent_main_runtime.cpp : 2005]
+ added new ghost field because of nestset: topo_ghosts
+******************* LEARN *******************
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+I_R[rhoY(HO2)] min -27384.5422158805 len 202187.395738172
+I_R[rhoY(OH)] min -243511.594254377 len 437576.345160731
+I_R[rhoY(NC12H26)] min -10996433.5069169 len 11032188.5941235
+I_R[rhoY(H)] min -4361.12641963672 len 8388.44890878711
+I_R[rhoY(H2O2)] min -356720.278298766 len 390228.61358109
+temp min 300.76719182871 len 2791.90784333686
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 49152
+Number of values 65536
+Number of values 16384
+Number of values 32768
+Number of values 49152
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 16384
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 32768
+Number of values 32768
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 65536
+Number of values 16384
+Number of values 16384
+Number of values 65536
+Number of values 65536
+Number of values 32768
+In rank 48
+In rank 8
+In rank 15
+In rank 25
+I_R[rhoY(HO2)] average fmms 0
+I_R[rhoY(OH)] average fmms 0
+I_R[rhoY(NC12H26)] average fmms 0
+I_R[rhoY(H)] average fmms 0
+I_R[rhoY(H2O2)] average fmms 0
+temp average fmms 0
+Spatial metric min 1.79769313486232e+308
+Spatial metric max -1.79769313486232e+308
+Spatial threshold 0.7
+In rank 0
+In rank 13
+In rank 54
+In rank 41
+In rank 37
+In rank 43
+In rank 6
+In rank 22
+In rank 29
+In rank 36
+In rank 38
+In rank 9
+In rank 26
+In rank 58
+In rank 5
+In rank 57
+In rank 4
+In rank 42
+In rank 55
+In rank 34
+In rank 18
+In rank 39
+In rank 14
+In rank 19
+In rank 2
+In rank 24
+In rank 23
+In rank 7
+In rank 40
+In rank 11
+In rank 1
+In rank 27
+In rank 30
+In rank 59
+In rank 17
+In rank 47
+In rank 21
+In rank 3
+In rank 32
+In rank 12
+In rank 20
+In rank 51
+In rank 33
+In rank 28
+In rank 46
+In rank 52
+In rank 44
+In rank 31
+In rank 45
+In rank 10
+In rank 35
+In rank 56
+In rank 50
+In rank 49
+In rank 16
+In rank 53
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003429/file_000000.hdf5 path domain_000000
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003429/file_000000.hdf5 path domain_000001
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filespatial_metric.cycle_003429/file_000001.hdf5 path domain_000002
+
+state: 
+  domain_id: 0
+  cycle: 3429
+  time: 0.000369825907337974
+  level: 0
+topologies: 
+  topo: 
+    type: "uniform"
+    coordset: "coords"
+    elements: 
+      origin: 
+        i0: 32
+        j0: 0
+        k0: 64
+coordsets: 
+  coords: 
+    type: "uniform"
+    dims: 
+      i: 2
+      j: 2
+      k: 2
+    origin: 
+      x: 0.00128
+      y: 0.0
+      z: 0.00256
+    spacing: 
+      dx: 0.00132
+      dy: 0.00132
+      dz: 0.00068
+fields: 
+  spatial_metric: 
+    association: "element"
+    topology: "topo"
+    values: 0.0
+
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003429/file_000000.hdf5 path domain_000000
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003429/file_000000.hdf5 path domain_000001
+[/ccs/home/arientm/ALPINE/ascent/src/ascent/runtimes/flow_filters/ascent_runtime_relay_filters.cpp : 896]
+ rank 0 output_filesmall_spatial_metric.cycle_003429/file_000000.hdf5 path domain_000002
+goAscent action 29.3266640649999
+AMR CALL TO PlotFile 
+
+AMR CALL TO PlotFile 
+
+estTimeStep :: 
+LEV = 0 UMAX = 7.68945977031328  6.31826750946377  24.6042995916056  
+estimated timestep: dt = 1.62573211446536e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.62573211446536e-07, 3.17863452840126e-06
+...estdt from particles at level 0: 1.79769313486232e+308
+estTimeStep :: 
+LEV = 1 UMAX = 8.1924957625322  7.00889356409442  27.931699511692  
+estimated timestep: dt = 7.16032334216833e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.16032334216833e-08, 1.61480152106022e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+estTimeStep :: 
+LEV = 2 UMAX = 13.444794003552  12.9245450839651  32.3669412033043  
+estimated timestep: dt = 3.08957214621786e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 3.08957214621786e-08, 8.18269323056503e-07
+...estdt from particles at level 2: 1.6682333499221e-07
+Calling redistribute because grid has changed 
+[0] PeleLM::advance() : starting time = 0.000369825907337974 with dt = 1.23337302855433e-07
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[0]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.138187823999942
+[0]   SDC: 1 - computing A 
+[0]   SDC: 1 - computing D 
+[0]   SDC: 1 - computing R 
+[0]   SDC: 1 DONE 
+... predict edge velocities
+[0]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 0, time: 0.129750555000101
+[0]   SDC: 2 - computing A 
+[0]   SDC: 2 - computing D 
+[0]   SDC: 2 - computing R 
+[0]   SDC: 2 DONE 
+[0]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[0]   - Nodal projection 
+estTimeStep :: 
+LEV = 0 UMAX = 7.63951265831153  6.27670730239325  24.6385697861273  
+estimated timestep: dt = 1.62347085675898e-07
+PeleLM::estTimeStep(): estdt, divu_dt = 1.62347085675898e-07, 3.17843701867899e-06
+...estdt from particles at level 0: 1.79769313486232e+308
+[0] PeleLM::advance() : at end of time step
+[1] PeleLM::advance() : starting time = 0.000369825907337974 with dt = 6.16686514277164e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[1]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.302252025999906
+[1]   SDC: 1 - computing A 
+[1]   SDC: 1 - computing D 
+[1]   SDC: 1 - computing R 
+[1]   SDC: 1 DONE 
+... predict edge velocities
+[1]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 1, time: 0.30297657899996
+[1]   SDC: 2 - computing A 
+[1]   SDC: 2 - computing D 
+[1]   SDC: 2 - computing R 
+[1]   SDC: 2 DONE 
+[1]   SDC iterations completed 
+... advect velocities
+... update velocities 
+[1]   - Nodal projection 
+estTimeStep :: 
+LEV = 1 UMAX = 8.1924245467313  7.33737592903591  28.0946689628671  
+estimated timestep: dt = 7.11878827489803e-08
+PeleLM::estTimeStep(): estdt, divu_dt = 7.11878827489803e-08, 1.61478763671598e-06
+...estdt from particles at level 1: 1.79769313486232e+308
+[1] PeleLM::advance() : at end of time step
+[2] PeleLM::advance() : starting time = 0.000369825907337974 with dt = 3.08343257138582e-08
+moveKickDrift ... updating particle positions and velocity
+... predict edge velocities
+[2]   SDC: 1 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.402977921000002
+[2]   SDC: 1 - computing A 
+[2]   SDC: 1 - computing D 
+[2]   SDC: 1 - computing R 
+[2]   SDC: 1 DONE 
+... predict edge velocities
+[2]   SDC: 2 - MAC projection 
+... mac_projection
+NavierStokesBase:mac_project(): lev: 2, time: 0.405568320999919
+[2]   SDC: 2 - computing A 
+[2]   SDC: 2 - computing D 
+[2]   SDC: 2 - computing R 
+ERROR:  One or more process (first noticed rank 32) terminated with signal 12
