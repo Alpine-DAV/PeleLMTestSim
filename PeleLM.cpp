@@ -8888,7 +8888,11 @@ PeleLM::writePlotFile (const std::string& dir,
                        std::ostream&  os,
                        VisMF::How     how)
 {
+
+	amrex::Print() << " WRITE_PLOT_FILE" << std::endl;
+
 #ifdef USE_ASCENT
+	amrex::Print() << " goAscent!() " << std::endl;
   if(level == 0) goAscent(parent->levelSteps(0));
 #endif
  
