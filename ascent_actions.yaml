@@ -1,0 +1,31 @@
+-
+  action: "add_scenes"
+  scenes:
+    s1:
+      plots:
+        p1:
+          type: "pseudocolor"
+          field: "temp"
+    s2:
+      plots:
+        p1:
+          type: "pseudocolor"
+          field: "I_R[rhoY(HO2)]"
+-
+  action: "add_extracts"
+  extracts:
+    e0:
+      type: "relay"
+      params:
+        path: "rout_bp_extract_"
+        protocol: "blueprint/mesh/hdf5"
+    e1:
+      type: "learn"
+      params:
+        fields:
+          - "I_R[rhoY(HO2)]"
+          - "I_R[rhoY(OH)]"
+          - "I_R[rhoY(NC12H26)]"
+          - "I_R[rhoY(H)]"
+          - "I_R[rhoY(H2O2)]"
+          - "temp"

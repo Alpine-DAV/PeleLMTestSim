@@ -158,6 +158,7 @@ PeleLM::goAscent (int nstep)
         //      verify_info.print();
         }
 
+	amrex::Print() << "HERE IS THE SIZE OF OUR DATA " << bp_mesh.total_bytes_compact() << std::endl;
         conduit::Node bp_mesh_des;
 	bp_mesh.describe(bp_mesh_des);
 	amrex::Print() << bp_mesh_des.to_yaml() << std::endl;
@@ -197,10 +198,14 @@ PeleLM::goAscent (int nstep)
   add_pipelines["action"] = "add_pipelines";
   add_pipelines["pipelines"] = pipelines;
 #endif
+  bool GO == nstep > 30;
 
+  if(GO)
+  {
   ascent.publish(bp_mesh);
 
   ascent.execute(actions);
+  }
 
   Real action_time = ParallelDescriptor::second() - strt_time;
   amrex::Print()<< "goAscent action " << action_time << std::endl;
